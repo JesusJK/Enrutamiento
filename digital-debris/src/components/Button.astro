@@ -1,9 +1,9 @@
 ---
-
+const {isRead = false } = Astro.props
 ---
 
 <div class="hover:cursor-pointer items-center space-x-1 hover:bg-blue-600 transition-colors text-white bg-blue-500 px-2 inline-flex border rounded-md"
-class:list={{"bg-red-500 hover:bg-red-600" : true}}
+class:list={{"bg-red-500 hover:bg-red-600" : isRead}}
 >
     <slot name="star-icon"/>
     <slot name="text">
