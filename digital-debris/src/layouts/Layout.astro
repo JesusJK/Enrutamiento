@@ -40,7 +40,18 @@ const { title = 'No name', msg = 'Hola mundo' } = Astro.props;
 		</menu>
 		<p>tu mensaje es:{msg}</p>
 		
-		
 		<slot />
 	</body>
 </html>
+
+<!-- fuera del html -->
+<style is:global>  
+@font-face {
+  font-family: 'myfont';
+  src: url('/fonts/Oswald-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+</style>
