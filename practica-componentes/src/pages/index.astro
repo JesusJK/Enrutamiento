@@ -1,0 +1,27 @@
+---
+import Producto from '../components/Producto.astro';
+import Layout from '../layouts/Layout.astro';
+const {img1 = '/src/img/producto1.jpg'} = Astro.props;
+const {img2 = '/src/img/control.webp'} = Astro.props;
+const {img3 = '/src/img/producto1.jpg'} = Astro.props;
+
+---
+
+<Layout>
+	<section class="grid justify-center p-5 gap-4">
+		<h1 class="text-center">
+			Pagina Principal
+		</h1>
+		<Producto link={img1}/>
+		<Producto secundario link={img1}/>
+		<Producto link={img2}>
+			<span slot="text-1">
+				<h1>Control para controlar</h1>
+			</span>
+			<span slot="text-2">
+				Hola guacho tremendo control
+			</span>
+			
+		</Producto>
+	</section>
+</Layout>

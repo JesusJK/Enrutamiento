@@ -8,9 +8,41 @@ export function getStaticPaths() {
     {params: {news: 'spot'}},
   ];
 }
-
 const { news } = Astro.params;
+let contain;
+
+switch (news) {
+  case "clifford":
+    contain = {
+      titulo : "El gran perro rojo",
+      description : "Clifford es un gran perro rojo bien basado alv",
+      img : "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftienda-onepiece.com%2Fproducts%2Ffigura-nami-h%2F&psig=AOvVaw020rB7xI2xopYcS5eWsDWC&ust=1733454028227000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiuqtLRj4oDFQAAAAAdAAAAABAE" ,
+    }
+    break;
+  case "rover":
+    contain = {
+      titulo : "Adopta a una perra mas grande que pitty",
+      description : "Pitty es una perra y necesita compañia 🥵",
+      img : "https://petshopchicureo.cl/cdn/shop/articles/razas_de_perro_grande_c949e892-1c07-4f70-a129-7aa759971f19_600x600_crop_center.png?v=1696407013" ,
+    }
+    break;
+  case "spot":
+    contain = {
+      titulo : "La cuchara de tu mamá",
+      description : "mete Siempre la cucharada esa mama tuya parece camara we ",
+      img : "https://www.google.com/url?sa=i&url=https%3A%2F%2Felpereirano.com%2F2024%2F03%2F08%2Fpereira-invierte-10-mil-millones-en-camara-de-seguridad-para-la-ciudad%2F&psig=AOvVaw3quJIOsKmetaM-RdXwGCzK&ust=1733455206349000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiYu4rWj4oDFQAAAAAdAAAAABAE" ,
+    }
+    break;
+
+  default:
+
+    break;
+}
+
 ---
 <Layout>
-    El título de la noticia es: {news}
+    <section class="">
+      
+    </section>
+
 </Layout>
