@@ -12,21 +12,21 @@ const { news } = Astro.params;
 let contain;
 
 switch (news) {
-  case "clifford":
+  case 'clifford':
     contain = {
       titulo : "El gran perro rojo",
       description : "Clifford es un gran perro rojo bien basado alv",
       img : "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftienda-onepiece.com%2Fproducts%2Ffigura-nami-h%2F&psig=AOvVaw020rB7xI2xopYcS5eWsDWC&ust=1733454028227000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiuqtLRj4oDFQAAAAAdAAAAABAE" ,
     }
     break;
-  case "rover":
+  case 'rover':
     contain = {
       titulo : "Adopta a una perra mas grande que pitty",
       description : "Pitty es una perra y necesita compañia 🥵",
-      img : "https://petshopchicureo.cl/cdn/shop/articles/razas_de_perro_grande_c949e892-1c07-4f70-a129-7aa759971f19_600x600_crop_center.png?v=1696407013" ,
+      img : "/src/img/perro.avif" ,
     }
     break;
-  case "spot":
+  case 'spot':
     contain = {
       titulo : "La cuchara de tu mamá",
       description : "mete Siempre la cucharada esa mama tuya parece camara we ",
@@ -34,15 +34,13 @@ switch (news) {
     }
     break;
 
-  default:
-
-    break;
 }
 
 ---
 <Layout>
-    <section class="">
-      
+    <section class="grid justify-items-center p-4 gap-3">
+      <h1 class="text-2xl font-serif w-max">{contain.titulo}</h1>
+      <span>{contain.description}</span>
+      <img class="w-[600px] h-auto" src={contain.img} alt="">      
     </section>
-
 </Layout>

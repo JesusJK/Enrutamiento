@@ -1,0 +1,22 @@
+---
+import ButtonDown from "./ButtonDown.astro";
+
+---
+
+<section class="p-7 pl-10 flex justify-between bg-white h-max w-[75vw] rounded-xl gap-2">
+    <div class="grid max-w-[350px] gap-3">
+        <slot name="text">
+            <h2>Dashboard</h2>
+        </slot>
+        <span class="border-t-4 border-[#4537c4] rounded text-[#b8b8b8] text-sm w-max mb-3">
+            You Fizes 20 USD capsul address
+        </span>
+        <span class="grid gap-1 mb-6">
+            <h3 class="font-semibold text-lg">Add your first servicie</h3>
+            <p class="text-[#b8b8b8] text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, officia?Lorem ipsum dolor sit amet.
+            </p>
+        </span>
+        <ButtonDown/>
+    </div>
+</section>

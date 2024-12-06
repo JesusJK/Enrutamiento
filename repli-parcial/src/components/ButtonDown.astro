@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components"
+
+---
+<section class="group w-max grid gap-1">
+    <div class="hover:cursor-pointer bg-[#4454dd] text-white p-1 px-3 flex items-center gap-3 rounded-md">
+        <p class="text-lg">Add Servicie</p>
+        <Icon size="15px" name="f7:chevron-down"/>
+    </div>
+
+    <div class="rounded p-2 px-3 border invisible group-hover:visible transition duration-100">
+        <ul>
+            <li class="font-medium hover:bg-[#e4e3e3] p-1 px-2 rounded-md hover:cursor-pointer">Application</li>
+            <li class="font-medium hover:bg-[#e4e3e3] p-1 px-2 rounded-md hover:cursor-pointer">Database</li>
+        </ul>
+    </div>
+</section>

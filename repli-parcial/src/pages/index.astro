@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Tarjet from '../components/Tarjet.astro';
+const Currenthpath = Astro.url.pathname;
+let tittle;
+if (Currenthpath == '/') {
+    tittle = "Dashboard"
+}
+
+---
+
+<Layout>
+	<Tarjet>
+        <span slot="text" class="font-semibold text-xl mb-6">{tittle}</span>
+    </Tarjet>
+</Layout>
